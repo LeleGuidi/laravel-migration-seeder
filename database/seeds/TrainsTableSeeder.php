@@ -24,5 +24,19 @@ class TrainsTableSeeder extends Seeder
             $newTrain->deleted = $faker->boolean();
             $newTrain->save();
         }
+
+        $newTrain = new Train();
+            $newTrain->company = 'Alitalia';
+            $newTrain->departure_station = 'Torino';
+            $newTrain->arrival_station = 'Milano';
+            $newTrain->departure_date = '2022-07-16';
+            $newTrain->departure_time = '16:50:12';
+            $newTrain->arrival_time = '18:55:50';
+            $newTrain->train_code = $faker->numerify('train-####');
+            $newTrain->number_carriages = $faker->numberBetween(1, 20);
+            $newTrain->in_time = $faker->boolean();
+            $newTrain->deleted = $faker->boolean();
+            $newTrain->save();
+
     }
 }
